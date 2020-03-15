@@ -1,0 +1,13 @@
+alias ac="python ~/Python/atcoder-contest/main.py"
+t() {oj t -d $1/test -c "python $1/main.py"}
+s() {
+    cd $1
+    pwd
+    oj s --no-open main.py -l python3
+    cd ..
+}
+sp() {
+    cd $1
+    oj s --no-guess -l pypy3 --no-open main.py
+    cd ..
+}
